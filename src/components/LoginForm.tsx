@@ -26,7 +26,11 @@ const LoginForm = () => {
   };
 
   const handleSocialLogin = (provider: string) => {
-    toast.info(`${provider} login coming soon!`);
+    if (provider === "Google") {
+      window.location.href = "https://accounts.google.com/oauth/authorize?client_id=your-google-client-id&redirect_uri=your-redirect-uri&scope=openid%20email%20profile&response_type=code";
+    } else if (provider === "LinkedIn") {
+      window.location.href = "https://www.linkedin.com/oauth/v2/authorization?client_id=your-linkedin-client-id&redirect_uri=your-redirect-uri&scope=r_liteprofile%20r_emailaddress&response_type=code";
+    }
   };
 
   return (
