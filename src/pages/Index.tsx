@@ -1,64 +1,80 @@
-import LoginForm from "@/components/LoginForm";
-import FloatingElements from "@/components/FloatingElements";
-import contractorHero from "@/assets/contractor-hero.jpg";
-import { Building2, Shield, Clock } from "lucide-react";
+import DeelLoginForm from "@/components/DeelLoginForm";
+import { Users, Globe, Shield, CheckCircle } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="min-h-screen login-gradient relative">
-      <FloatingElements />
-      
+    <div className="min-h-screen deel-gradient relative">
       <div className="min-h-screen flex">
         {/* Left Panel - Hero Content */}
         <div className="hidden lg:flex lg:w-1/2 flex-col justify-center px-12 relative">
           <div className="max-w-lg animate-fade-in">
-            <div className="mb-8">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="bg-accent/20 p-3 rounded-xl">
-                  <Building2 className="h-8 w-8 text-accent" />
-                </div>
-                <h1 className="text-3xl font-bold text-white">
-                  ContractorPro
-                </h1>
+            <div className="mb-12">
+              <div className="flex items-center space-x-3 mb-8">
+                <div className="text-4xl font-bold text-primary">deel</div>
               </div>
               
-              <h2 className="text-5xl font-bold text-white mb-6 leading-tight">
-                Your Digital
+              <h1 className="text-5xl font-bold text-primary mb-6 leading-tight">
+                Global payroll
                 <br />
-                <span className="text-accent">Construction</span>
+                and compliance,
                 <br />
-                Hub
-              </h2>
+                <span className="text-accent">simplified</span>
+              </h1>
               
-              <p className="text-xl text-white/80 mb-8 leading-relaxed">
-                Streamline your projects, manage your team, and grow your business 
-                with our comprehensive contractor management platform.
+              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+                Simplify the way you hire, pay, and manage global teams with our 
+                all-in-one platform. Deel helps companies scale with unmatched 
+                speed, flexibility and compliance.
               </p>
             </div>
 
             {/* Feature highlights */}
-            <div className="space-y-4 mb-8">
-              <div className="flex items-center space-x-3 text-white/90">
-                <Shield className="h-5 w-5 text-accent" />
-                <span className="font-medium">Secure project management</span>
+            <div className="space-y-6 mb-12">
+              <div className="flex items-start space-x-4">
+                <div className="bg-accent/10 p-2 rounded-lg mt-1">
+                  <Users className="h-5 w-5 text-accent" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-primary mb-1">Global workforce</h3>
+                  <p className="text-sm text-muted-foreground">Hire anyone, anywhere with full compliance</p>
+                </div>
               </div>
-              <div className="flex items-center space-x-3 text-white/90">
-                <Clock className="h-5 w-5 text-accent" />
-                <span className="font-medium">Real-time collaboration</span>
+              
+              <div className="flex items-start space-x-4">
+                <div className="bg-accent/10 p-2 rounded-lg mt-1">
+                  <Shield className="h-5 w-5 text-accent" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-primary mb-1">Secure & compliant</h3>
+                  <p className="text-sm text-muted-foreground">Bank-grade security with global compliance</p>
+                </div>
               </div>
-              <div className="flex items-center space-x-3 text-white/90">
-                <Building2 className="h-5 w-5 text-accent" />
-                <span className="font-medium">End-to-end solutions</span>
+              
+              <div className="flex items-start space-x-4">
+                <div className="bg-accent/10 p-2 rounded-lg mt-1">
+                  <Globe className="h-5 w-5 text-accent" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-primary mb-1">150+ countries</h3>
+                  <p className="text-sm text-muted-foreground">Operate globally with local expertise</p>
+                </div>
               </div>
             </div>
 
-            {/* Hero Image */}
-            <div className="animate-slide-in-right">
-              <img
-                src={contractorHero}
-                alt="Professional construction worker with digital tools"
-                className="rounded-2xl shadow-2xl hover-lift"
-              />
+            {/* Trust indicators */}
+            <div className="space-y-4">
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="h-4 w-4 text-success" />
+                <span className="text-sm text-muted-foreground">Trusted by 35,000+ companies</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="h-4 w-4 text-success" />
+                <span className="text-sm text-muted-foreground">9,000+ 5-star reviews</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="h-4 w-4 text-success" />
+                <span className="text-sm text-muted-foreground">Advanced data security</span>
+              </div>
             </div>
           </div>
         </div>
@@ -69,30 +85,20 @@ const Index = () => {
             {/* Mobile header */}
             <div className="lg:hidden text-center mb-8 animate-fade-in">
               <div className="flex items-center justify-center space-x-3 mb-4">
-                <div className="bg-accent/20 p-2 rounded-lg">
-                  <Building2 className="h-6 w-6 text-accent" />
-                </div>
-                <h1 className="text-2xl font-bold text-white">
-                  ContractorPro
-                </h1>
+                <div className="text-3xl font-bold text-primary">deel</div>
               </div>
-              <p className="text-white/80">
-                Your Digital Construction Hub
+              <p className="text-muted-foreground">
+                Global payroll and compliance, simplified
               </p>
             </div>
 
-            <LoginForm />
+            <DeelLoginForm />
 
-            {/* Trust indicators */}
+            {/* Footer */}
             <div className="mt-8 text-center animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <p className="text-xs text-white/60 mb-2">
-                Trusted by 10,000+ contractors worldwide
+              <p className="text-xs text-muted-foreground">
+                Trusted by companies from startups to enterprise
               </p>
-              <div className="flex justify-center space-x-4 text-white/40">
-                <span className="text-xs">🏗️ Secure</span>
-                <span className="text-xs">⚡ Fast</span>
-                <span className="text-xs">📱 Mobile</span>
-              </div>
             </div>
           </div>
         </div>

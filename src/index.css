@@ -6,63 +6,61 @@
 
 @layer base {
   :root {
-    /* Main background - clean white */
     --background: 0 0% 100%;
-    --foreground: 220 13% 13%;
+    --foreground: 225 15% 15%;
 
-    /* Card system - elevated white cards */
     --card: 0 0% 100%;
-    --card-foreground: 220 13% 13%;
+    --card-foreground: 225 15% 15%;
 
-    /* Popover elements */
     --popover: 0 0% 100%;
-    --popover-foreground: 220 13% 13%;
+    --popover-foreground: 225 15% 15%;
 
-    /* Primary - Blue Theme */
-    --primary: 220 91% 50%;
+    /* Primary - Deel Navy */
+    --primary: 225 25% 15%;
     --primary-foreground: 0 0% 98%;
-    --primary-glow: 220 91% 60%;
+    --primary-glow: 225 25% 25%;
 
-    /* Secondary - Light construction gray */
-    --secondary: 220 10% 95%;
-    --secondary-foreground: 220 13% 13%;
+    /* Secondary - Light gray */
+    --secondary: 220 15% 96%;
+    --secondary-foreground: 225 15% 15%;
 
-    /* Muted elements */
-    --muted: 220 10% 95%;
-    --muted-foreground: 220 9% 46%;
-
-    /* Accent - Construction Orange */
-    --accent: 25 95% 53%;
-    --accent-foreground: 0 0% 98%;
-    --accent-glow: 25 95% 63%;
-
-    /* Success - Safety Green */
-    --success: 142 71% 45%;
-    --success-foreground: 0 0% 98%;
-
-    /* Destructive - Warning Red */
+    /* Destructive - Warning red */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    /* Form inputs */
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 220 91% 25%;
+    /* Muted - Subtle grays */
+    --muted: 220 15% 96%;
+    --muted-foreground: 225 15% 45%;
 
-    /* Gradients - Blue to White Theme */
-    --gradient-primary: linear-gradient(135deg, hsl(220 91% 50%), hsl(220 50% 80%));
-    --gradient-hero: linear-gradient(135deg, hsl(220 91% 50%) 0%, hsl(220 50% 70%) 50%, hsl(0 0% 100%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 30% 98%) 100%);
-    --gradient-button: linear-gradient(135deg, hsl(220 91% 50%), hsl(220 91% 60%));
-    --gradient-accent: linear-gradient(135deg, hsl(25 95% 53%), hsl(25 95% 63%));
+    /* Accent - Deel Blue */
+    --accent: 210 100% 50%;
+    --accent-foreground: 0 0% 98%;
+    --accent-glow: 210 100% 60%;
+
+    /* Success - Green */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
+
+    /* Border and input */
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 210 100% 50%;
+
+    /* Gradients - Deel-inspired */
+    --gradient-primary: linear-gradient(135deg, hsl(225 25% 15%), hsl(210 100% 50%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 100% 95%) 0%, hsl(210 100% 90%) 50%, hsl(200 100% 85%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 30% 99%) 100%);
+    --gradient-button: linear-gradient(135deg, hsl(210 100% 50%), hsl(210 100% 60%));
+    --gradient-accent: linear-gradient(135deg, hsl(210 100% 50%), hsl(210 100% 60%));
 
     /* Shadows */
-    --shadow-elegant: 0 10px 40px -15px hsl(220 91% 25% / 0.3);
-    --shadow-card: 0 4px 20px -8px hsl(220 13% 13% / 0.1);
-    --shadow-button: 0 4px 15px -3px hsl(220 91% 25% / 0.3);
-    --shadow-glow: 0 0 30px hsl(220 91% 25% / 0.4);
+    --shadow-elegant: 0 10px 30px -10px hsl(225 25% 15% / 0.15);
+    --shadow-glow: 0 0 40px hsl(210 100% 50% / 0.2);
+    --shadow-soft: 0 4px 20px -4px hsl(225 25% 15% / 0.08);
 
-    /* Border radius */
+    /* Animation */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
     --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
@@ -149,56 +147,38 @@
 }
 
 @layer components {
-  /* Login page specific styles */
-  .login-gradient {
+  /* Deel-inspired utility classes */
+  .deel-gradient {
     background: var(--gradient-hero);
   }
 
-  .card-gradient {
-    background: var(--gradient-card);
-    box-shadow: var(--shadow-card);
+  .card-glass {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: var(--shadow-soft);
   }
 
-  .button-gradient {
+  .button-primary {
     background: var(--gradient-button);
-    box-shadow: var(--shadow-button);
   }
 
-  .accent-gradient {
-    background: var(--gradient-accent);
+  .hover-scale {
+    transition: var(--transition-smooth);
   }
 
-  /* Animation utilities */
-  .animate-slide-up {
-    animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  .hover-scale:hover {
+    transform: scale(1.02);
   }
 
-  .animate-slide-in-right {
-    animation: slideInRight 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .animate-fade-in {
-    animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-
-  /* Hover animations */
   .hover-lift {
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: var(--transition-smooth);
   }
 
   .hover-lift:hover {
-    transform: translateY(-4px);
+    transform: translateY(-1px);
     box-shadow: var(--shadow-elegant);
   }
-
-  .hover-glow:hover {
-    box-shadow: var(--shadow-glow);
-  }
-}
 
 @keyframes slideUp {
   from {
