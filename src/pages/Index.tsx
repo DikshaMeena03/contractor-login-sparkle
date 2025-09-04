@@ -124,7 +124,10 @@ const Index = () => {
                   variant="outline" 
                   className="w-full h-12 border-border hover:bg-muted hover-lift transition-all duration-200 text-foreground"
                 >
-                  Book a Demo
+                  <Link to="/signup" className="flex items-center space-x-2 w-full justify-center">
+                    <span>Create Free Account</span>
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
                 </Button>
               </div>
 
