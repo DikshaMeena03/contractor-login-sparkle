@@ -36,7 +36,7 @@ const DeelLoginForm = () => {
       <div className="card-glass rounded-2xl p-8 animate-fade-in">
         <div className="text-center mb-8">
           <div className="flex items-center justify-center mb-6">
-            <div className="text-3xl font-bold text-primary">deel</div>
+            <div className="text-3xl font-bold text-primary">ContractorPay</div>
           </div>
           <h1 className="text-2xl font-semibold text-foreground mb-2">
             Welcome back
