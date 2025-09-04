@@ -1,5 +1,6 @@
-import DeelLoginForm from "@/components/DeelLoginForm";
-import { Users, Globe, Shield, CheckCircle } from "lucide-react";
+import { Users, Globe, Shield, CheckCircle, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import digitalHeroImg from "@/assets/digital-age-hero.jpg";
 
 const Index = () => {
@@ -88,11 +89,11 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Right Panel - Login Form */}
+        {/* Right Panel - Call to Action */}
         <div className="w-full lg:w-1/2 flex items-center justify-center px-6 py-12">
-          <div className="w-full max-w-md">
+          <div className="w-full max-w-md text-center">
             {/* Mobile header */}
-            <div className="lg:hidden text-center mb-8 animate-fade-in">
+            <div className="lg:hidden mb-8 animate-fade-in">
               <div className="flex items-center justify-center space-x-3 mb-4">
                 <div className="text-3xl font-bold text-primary">ContractorPay</div>
               </div>
@@ -101,13 +102,37 @@ const Index = () => {
               </p>
             </div>
 
-            <DeelLoginForm />
-
-            {/* Footer */}
-            <div className="mt-8 text-center animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <p className="text-xs text-muted-foreground">
-                Trusted by companies from startups to enterprise
+            <div className="card-glass rounded-2xl p-8 animate-fade-in">
+              <h2 className="text-3xl font-bold text-primary mb-4">
+                Ready to get started?
+              </h2>
+              <p className="text-muted-foreground mb-8">
+                Join thousands of companies that trust ContractorPay for their global workforce management.
               </p>
+              
+              <div className="space-y-4">
+                <Link to="/signin" className="block">
+                  <Button className="w-full h-12 button-primary hover:hover-scale text-primary-foreground font-medium transition-all duration-300">
+                    <div className="flex items-center space-x-2">
+                      <span>Sign In</span>
+                      <ArrowRight className="h-4 w-4" />
+                    </div>
+                  </Button>
+                </Link>
+                
+                <Button 
+                  variant="outline" 
+                  className="w-full h-12 border-border hover:bg-muted hover-lift transition-all duration-200 text-foreground"
+                >
+                  Book a Demo
+                </Button>
+              </div>
+
+              <div className="mt-8">
+                <p className="text-xs text-muted-foreground">
+                  Trusted by companies from startups to enterprise
+                </p>
+              </div>
             </div>
           </div>
         </div>
