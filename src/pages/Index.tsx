@@ -1,5 +1,6 @@
 import DeelLoginForm from "@/components/DeelLoginForm";
 import { Users, Globe, Shield, CheckCircle } from "lucide-react";
+import digitalHeroImg from "@/assets/digital-age-hero.jpg";
 
 const Index = () => {
   return (
@@ -7,7 +8,15 @@ const Index = () => {
       <div className="min-h-screen flex">
         {/* Left Panel - Hero Content */}
         <div className="hidden lg:flex lg:w-1/2 flex-col justify-center px-12 relative">
-          <div className="max-w-lg animate-fade-in">
+          {/* Background image */}
+          <div 
+            className="absolute inset-0 opacity-20 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${digitalHeroImg})` }}
+          />
+          {/* Overlay gradient */}
+          <div className="absolute inset-0 bg-gradient-to-r from-background/80 to-background/40" />
+          
+          <div className="max-w-lg animate-fade-in relative z-10">
             <div className="mb-12">
               <div className="flex items-center space-x-3 mb-8">
                 <div className="text-4xl font-bold text-primary">deel</div>

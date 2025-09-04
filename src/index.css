@@ -179,6 +179,7 @@
     transform: translateY(-1px);
     box-shadow: var(--shadow-elegant);
   }
+}
 
 @keyframes slideUp {
   from {
