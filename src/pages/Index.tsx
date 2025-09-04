@@ -19,7 +19,7 @@ const Index = () => {
           <div className="max-w-lg animate-fade-in relative z-10">
             <div className="mb-12">
               <div className="flex items-center space-x-3 mb-8">
-                <div className="text-4xl font-bold text-primary">deel</div>
+                <div className="text-4xl font-bold text-primary">ContractorPay</div>
               </div>
               
               <h1 className="text-5xl font-bold text-primary mb-6 leading-tight">
@@ -94,7 +94,7 @@ const Index = () => {
             {/* Mobile header */}
             <div className="lg:hidden text-center mb-8 animate-fade-in">
               <div className="flex items-center justify-center space-x-3 mb-4">
-                <div className="text-3xl font-bold text-primary">deel</div>
+                <div className="text-3xl font-bold text-primary">ContractorPay</div>
               </div>
               <p className="text-muted-foreground">
                 Global payroll and compliance, simplified
