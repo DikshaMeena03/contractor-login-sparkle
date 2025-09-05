@@ -39,6 +39,9 @@ const SignUpForm = () => {
     
     toast.success("Account created successfully! Welcome to ContractorPay.");
     setIsLoading(false);
+    
+    // Redirect to dashboard after successful signup
+    window.location.href = '/dashboard';
   };
 
   const handleSocialSignUp = (provider: string) => {

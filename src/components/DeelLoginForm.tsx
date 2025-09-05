@@ -21,6 +21,9 @@ const DeelLoginForm = () => {
     
     toast.success("Welcome back! Login successful.");
     setIsLoading(false);
+    
+    // Redirect to dashboard after successful login
+    window.location.href = '/dashboard';
   };
 
   const handleSocialLogin = (provider: string) => {
